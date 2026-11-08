@@ -53,3 +53,16 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+
+#ide
+.idea/
+.cmake-build-debug/
+
+
+#logs
+log.txt
+out.txt
+
+#reference book
+operating-system-in-1000-lines/

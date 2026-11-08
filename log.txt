@@ -1,0 +1,18 @@
++./run.sh:4> QEMU=qemu-system-riscv32 
++./run.sh:7> CC=/opt/homebrew/opt/llvm/bin/clang 
++./run.sh:8> CFLAGS='-std=c11 -O2 -g3 -Wall -Wextra --target=riscv32-unknown-elf -fuse-ld=lld -fno-stack-protector -ffreestanding -nostdlib' 
++./run.sh:11> /opt/homebrew/opt/llvm/bin/clang '-std=c11 -O2 -g3 -Wall -Wextra --target=riscv32-unknown-elf -fuse-ld=lld -fno-stack-protector -ffreestanding -nostdlib' -Wl,-Tkernel.ld '-Wl,-Map=kernel.map' -o kernel.elf kernel.c
+error: invalid value 'c11 -O2 -g3 -Wall -Wextra --target=riscv32-unknown-elf -fuse-ld=lld -fno-stack-protector -ffreestanding -nostdlib' in '-std=c11 -O2 -g3 -Wall -Wextra --target=riscv32-unknown-elf -fuse-ld=lld -fno-stack-protector -ffreestanding -nostdlib'
+note: use 'c89', 'c90', or 'iso9899:1990' for 'ISO C 1990' standard
+note: use 'iso9899:199409' for 'ISO C 1990 with amendment 1' standard
+note: use 'gnu89' or 'gnu90' for 'ISO C 1990 with GNU extensions' standard
+note: use 'c99' or 'iso9899:1999' for 'ISO C 1999' standard
+note: use 'gnu99' for 'ISO C 1999 with GNU extensions' standard
+note: use 'c11' or 'iso9899:2011' for 'ISO C 2011' standard
+note: use 'gnu11' for 'ISO C 2011 with GNU extensions' standard
+note: use 'c17', 'iso9899:2017', 'c18', or 'iso9899:2018' for 'ISO C 2017' standard
+note: use 'gnu17' or 'gnu18' for 'ISO C 2017 with GNU extensions' standard
+note: use 'c23' or 'iso9899:2024' for 'ISO C 2023' standard
+note: use 'gnu23' for 'ISO C 2023 with GNU extensions' standard
+note: use 'c2y' for 'Working Draft for ISO C2y' standard
+note: use 'gnu2y' for 'Working Draft for ISO C2y with GNU extensions' standard
