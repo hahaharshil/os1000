@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 set -xue
 
 QEMU=qemu-system-riscv32
@@ -12,5 +12,5 @@ $CC $CFLAGS -Wl,-Tkernel.ld -Wl,-Map=kernel.map -o kernel.elf \
     kernel.c
 
 # Start QEMU
-$QEMU -machine virt -bios default -nographic -serial mon:stdio --no-reboot \
+$QEMU -machine virt -bios default -nographic -serial mon:stdio --no-reboot -echr 0x02\
     -kernel kernel.elf
